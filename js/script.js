@@ -43,21 +43,32 @@ var swiper = new Swiper(".mySwiper", {
       prevEl: ".swiper-button-prev",
     },
   });
-let isScrolled = false
-  window.onscroll = () => {
-   isScrolled= (window.pageYOffset === 0 ? false : true)
-      return () => (
-          window.onscroll
-      )
-
-  }
-
-//   console.log(isScrolled)    const [isScrolled, setIsScrolled] = useState(false)
+// let isScrolled
 //   window.onscroll = () => {
-//       setIsScrolled(window.pageYOffset === 0 ? false : true)
-//       return () => (
-//           window.onscroll = null
-//       )
+//     scroll()
 
 //   }
-  console.log(isScrolled)
+//   let scroll=()=>{
+//     isScrolled= window.pageYOffset === 0 ? false : true
+//     // if(isScrolled){
+//     //   document.querySelector(".header").classList.add("scrolled")
+//     // }
+//     // else{ document.querySelector(".header").classList.remove("scrolled")}
+//   }
+
+  window.onscroll = () => {
+    let scroll = window.pageYOffset === 0 ? false : true
+    if (scroll) {
+      document.querySelector(".nav").classList.add("nav1")
+    }
+    else if(window.pageYOffset === 0){
+      
+        document.querySelector(".nav").classList.remove("nav1")
+  
+    }
+      
+    
+
+    console.log(window.pageYOffset)
+
+  }
