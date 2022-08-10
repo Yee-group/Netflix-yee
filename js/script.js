@@ -14,9 +14,9 @@ var swiper = new Swiper(".mySwiper", {
     },
   });
   var bigSwiper=new Swiper(".big-swiper", {
-    slidesPerView: 8,
+    slidesPerView: 5,
     spaceBetween: 0,
-    slidesPerGroup: 8,
+    slidesPerGroup: 5,
     loop: true,
     loopFillGroupWithBlank: true,
     pagination: {

@@ -244,12 +244,6 @@ li {
 
 }
 
-.big-swiper {
-
-    height: 440px;
-    /* background-color: brown; */
-
-}
 
 .cast {
     margin-top: 50px;
@@ -282,14 +276,14 @@ h3 i {
     /* background-color: #fff; */
 }
 
-.big-swiper .big-slide {
+/* .big-swiper .big-slide {
     width: 270px;
     height: 100%;
-}
+} */
 
 .big-slide .img2 {
 
-    width: 270px;
+    width: 100%;
     height: 100%;
     /* background-color: aqua; */
 
@@ -298,9 +292,9 @@ h3 i {
 
 .big-slide .img2 img {
     display: block;
-    width: 270px;
+    width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: fill;
 
 
 }
@@ -317,7 +311,7 @@ h3 i {
     transform: translate(-50px, -1px);
 }
 
-.card {
+.card1 {
     margin: 0px;
     /* background-color: #616161; */
     /* border: 1px solid black; */
@@ -331,6 +325,10 @@ h3 i {
     height: 3px;
     border-radius: 0;
     margin: 0;
+}
+
+.big-swiper .swiper-button-next {
+    left: 90%;
 }
 
 .swiper-button-next:after,
@@ -351,28 +349,47 @@ h3 i {
 .swiper-pagination-fraction {
     position: absolute;
     top: -10px;
-    left: 800px;
+    left: 60%;
     height: 10px;
 
 }
 
 .big-swiper .swiper-pagination {
     position: absolute;
+    width: 20px;
+    height: 10px;
     top: -14px;
 }
 
 .cast-swiper .swiper-pagination {
     position: absolute;
     top: -14px;
+    left: 1700px;
     height: 10px;
 }
 
-.swiper-pagination {
+.swiper .swiper-pagination {
     display: none;
+    width: 50px;
+    height: 5px;
 }
 
+.big-swiper .swiper-wrapper {
+    padding: 0;
+    margin-left: 10px;
+    /* width: 100%; */
+    /* position: relative;
+    left: -180px; */
+}
+
+.cast .swiper-button-next {
+    left: 90%;
+}
+
+
 .swiper-button-next {
-    right: 100px;
+    /* right: 100px; */
+    right: 1050px;
     cursor: pointer;
     display: none;
     color: white;
@@ -394,6 +411,7 @@ h3 i {
 .swiper:hover .swiper-pagination {
     display: block;
     background-color: aqua;
+    /* width: 100px; */
 }
 
 .swiper:hover .swiper-button-next {
@@ -412,9 +430,12 @@ h3 i {
     font-weight: 300;
     font-size: 14px;
     line-height: 16px;
+    position: relative;
+    /* top: 50%; */
 
     width: 100vw;
     color: #FFFFFF;
+    margin-bottom: 20px;
     margin-top: 50px;
 }
 
@@ -469,4 +490,239 @@ h3 i {
     position: relative;
     top: 30px;
     left: 200px;
+}
+
+
+/* ///////////////////////////////////// */
+.card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    flex-direction: column;
+    background: transparent;
+    z-index: 3;
+    /* margin-top: 200px; */
+    position: relative;
+    /* */
+}
+
+
+.card .img1 {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: #2c73df;
+    z-index: 4;
+
+}
+
+.card .img1 {
+
+    position: absolute;
+
+    top: 20%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    font-size: 80px;
+
+    color: #fff;
+
+}
+
+.card .slide2 {
+
+    width: 300px;
+
+    height: 200px;
+
+    transition: 0.5s;
+
+}
+
+.card .slide2.slide3 {
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 1;
+
+    transition: .7s;
+
+    transform: translateY(100px);
+
+}
+
+.card:hover .slide2.slide3 {
+
+    transform: translateY(0px);
+
+}
+
+.card .slide2.slide4 {
+
+    position: relative;
+    height: 100px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    transition: .8s;
+
+    transform: translateY(-100px);
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+
+}
+
+.card:hover .slide2.slide4 {
+
+    transform: translateY(0);
+
+}
+
+.slide2.slide4 .content i {
+    border-radius: 25px;
+    width: 50px;
+    height: 50px;
+    border: whitesmoke solid 2px;
+    align-self: center;
+    padding: 6px;
+    color: whitesmoke;
+}
+
+.slide2.slide4 .content i:first-child {
+    padding-left: 7px;
+    color: #000000;
+    background-color: whitesmoke;
+
+}
+
+.slide2.slide4 .content i:nth-child(3) {
+    padding-left: 4px;
+}
+
+.card .slide2.slide4::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 30px;
+
+    height: 4px;
+
+    bottom: 15px;
+
+    left: 50%;
+
+    top: 90%;
+
+    transform: translateX(-50%);
+
+    background: red
+}
+
+
+
+
+
+
+.card .img img {
+    display: block;
+    width: 130%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .img1 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+
+}
+
+.bigger {
+    width: 150vw;
+
+}
+
+/* cards================================= */
+
+.cards2 .layer {
+    z-index: 1;
+    position: absolute;
+    top: calc(100% - 2px);
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.689);
+    transition: 0.5s;
+    color: white;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards2:hover .layer {
+    top: 0;
+}
+
+.layer i {
+    border-radius: 30px;
+    width: 60px;
+    height: 60px;
+    border: whitesmoke solid 2px;
+    align-self: center;
+    /* padding: 6px; */
+    color: whitesmoke;
+    padding-left: 10px;
+    padding-top: 6px;
+    margin-left: 10px;
+}
+
+.cards2 {
+    width: 200px;
+    height: 378px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    background: none;
+    /* margin-left: 100px; */
+
 }
