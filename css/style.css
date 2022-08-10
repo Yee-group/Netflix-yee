@@ -228,6 +228,11 @@ li {
     align-items: center;
 }
 
+/* .first-swiper .swiper-pagination {
+    position: ;
+    left: 100%;
+} */
+
 .swiper-slide .img img {
     display: block;
     width: 130%;
@@ -348,8 +353,8 @@ h3 i {
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
     position: absolute;
-    top: -10px;
-    left: 60%;
+    top: -14px;
+    left: 90%;
     height: 10px;
 
 }
@@ -388,8 +393,9 @@ h3 i {
 
 
 .swiper-button-next {
+    position: absolute;
     /* right: 100px; */
-    right: 1050px;
+    left: 90%;
     cursor: pointer;
     display: none;
     color: white;
