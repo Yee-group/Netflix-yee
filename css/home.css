@@ -450,10 +450,10 @@ h3 i {
     position: relative;
     /* top: 50%; */
 
-    width: 100vw;
+    /* width: 100vw; */
     color: #FFFFFF;
     margin-bottom: 20px;
-    margin-top: 50px;
+    /* margin-top: 50px; */
 }
 
 .footer .list {
